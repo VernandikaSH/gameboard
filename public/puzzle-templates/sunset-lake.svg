@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2b1055"/>
+      <stop offset="35%" stop-color="#7b3f7a"/>
+      <stop offset="60%" stop-color="#e8654f"/>
+      <stop offset="78%" stop-color="#f7b733"/>
+    </linearGradient>
+    <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f7b733"/>
+      <stop offset="20%" stop-color="#c15a4a"/>
+      <stop offset="60%" stop-color="#4a3163"/>
+      <stop offset="100%" stop-color="#1c1233"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff6d0" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#fff6d0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="380" fill="url(#sky)"/>
+  <rect x="0" y="380" width="800" height="220" fill="url(#lake)"/>
+
+  <circle cx="420" cy="330" r="140" fill="url(#sunGlow)"/>
+  <circle cx="420" cy="330" r="70" fill="#ffe9a8"/>
+  <ellipse cx="420" cy="410" rx="60" ry="18" fill="#ffe9a8" opacity="0.35"/>
+  <ellipse cx="420" cy="440" rx="45" ry="12" fill="#ffe9a8" opacity="0.25"/>
+  <ellipse cx="420" cy="465" rx="30" ry="8" fill="#ffe9a8" opacity="0.18"/>
+
+  <ellipse cx="140" cy="120" rx="90" ry="20" fill="#ffffff" opacity="0.25"/>
+  <ellipse cx="190" cy="135" rx="60" ry="16" fill="#ffffff" opacity="0.2"/>
+  <ellipse cx="650" cy="90" rx="80" ry="18" fill="#ffffff" opacity="0.2"/>
+
+  <path d="M0,380 L60,300 L120,340 L180,260 L250,340 L320,290 L400,360 L470,280 L540,345 L620,270 L690,335 L760,300 L800,380 Z" fill="#241638"/>
+  <path d="M0,380 L60,300 L120,340 L180,260 L250,340 L320,290 L400,360 L470,280 L540,345 L620,270 L690,335 L760,300 L800,380"
+        fill="none" stroke="#3a2452" stroke-width="4"/>
+
+  <path d="M100,150 q10,-10 20,0 q10,-10 20,0" fill="none" stroke="#2b1a3d" stroke-width="3" stroke-linecap="round"/>
+  <path d="M540,180 q10,-10 20,0 q10,-10 20,0" fill="none" stroke="#2b1a3d" stroke-width="3" stroke-linecap="round"/>
+  <path d="M620,210 q10,-10 20,0 q10,-10 20,0" fill="none" stroke="#2b1a3d" stroke-width="3" stroke-linecap="round"/>
+
+  <g opacity="0.5">
+    <rect x="0" y="380" width="800" height="4" fill="#ffe9a8"/>
+  </g>
+</svg>

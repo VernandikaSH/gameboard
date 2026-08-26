@@ -1,103 +1,161 @@
-import Image from "next/image";
+import Link from 'next/link';
+import { Game } from '@/types';
+import Image from 'next/image';
+
+// Mock data for games
+const games: Game[] = [
+  {
+    id: 1,
+    title: 'Chess',
+    description: 'Classic strategy game for two players',
+    minPlayers: 2,
+    maxPlayers: 2,
+    imageUrl: '/game-thumbnail/chess.jpeg',
+    slug: 'chess'
+  },
+  {
+    id: 2,
+    title: 'Checkers',
+    description: 'Simple yet strategic board game',
+    minPlayers: 2,
+    maxPlayers: 2,
+    imageUrl: '/game-thumbnail/checkers.jpeg',
+    slug: 'checkers'
+  },
+  // {
+  //   id: 3,
+  //   title: 'Monopoly',
+  //   description: 'Classic property trading game',
+  //   minPlayers: 2,
+  //   maxPlayers: 4,
+  //   imageUrl: '/game-thumbnail/monopoly.jpeg',
+  //   slug: 'monopoly'
+  // },
+  // {
+  //   id: 4,
+  //   title: 'Scrabble',
+  //   description: 'Word building game with letter tiles',
+  //   minPlayers: 2,
+  //   maxPlayers: 4,
+  //   imageUrl: '/game-thumbnail/scrabble.jpeg',
+  //   slug: 'scrabble'
+  // },
+  {
+    id: 5,
+    title: 'Connect 4',
+    description: 'Tik Tak Toe like game in which the players drops disks to get a 4 in a row',
+    minPlayers: 2,
+    maxPlayers: 2,
+    imageUrl: '/game-thumbnail/connect4.jpeg',
+    slug: 'connect4'
+  },
+  {
+    id: 6,
+    title: 'Othello',
+    description: 'A strategy board game for two players',
+    minPlayers: 2,
+    maxPlayers: 2,
+    imageUrl: '/game-thumbnail/othello.jpeg',
+    slug: 'othello'
+  },
+  {
+    id: 7,
+    title: 'Snake and Ladder',
+    description: 'A simple race game based on sheer luck',
+    minPlayers: 2,
+    maxPlayers: 4,
+    imageUrl: '/game-thumbnail/snake-and-ladder.jpg',
+    slug: 'snake-and-ladder'
+  },
+  {
+    id: 8,
+    title: 'Ludo',
+    description: 'Race all four of your tokens home before your opponents',
+    minPlayers: 2,
+    maxPlayers: 4,
+    imageUrl: '/game-thumbnail/ludo.jpg',
+    slug: 'ludo'
+  },
+  {
+    id: 9,
+    title: 'Quoridor',
+    description: 'Race your pawn to the far side while placing walls to block your opponent',
+    minPlayers: 2,
+    maxPlayers: 2,
+    imageUrl: '/game-thumbnail/quoridor.jpg',
+    slug: 'quoridor'
+  },
+  {
+    id: 10,
+    title: 'Shut the Box',
+    description: 'Roll the dice and flip down tiles to score as low as possible',
+    minPlayers: 1,
+    maxPlayers: 4,
+    imageUrl: '/game-thumbnail/shut_the_box.jpg',
+    slug: 'shut-the-box'
+  },
+  {
+    id: 11,
+    title: 'Jigsaw Puzzle',
+    description: 'Upload your own photo or pick a template, then piece it back together',
+    minPlayers: 1,
+    maxPlayers: 1,
+    imageUrl: '/game-thumbnail/jigsaw-puzzle.svg',
+    slug: 'jigsaw-puzzle'
+  },
+  {
+    id: 12,
+    title: 'Memory Match',
+    description: 'Flip tiles to find matching pairs - pick a topic and how many tiles to play with',
+    minPlayers: 1,
+    maxPlayers: 1,
+    imageUrl: '/game-thumbnail/memory-match.svg',
+    slug: 'memory-match'
+  },
+  {
+    id: 13,
+    title: 'Mancala',
+    description: 'Sow stones around the board and capture your opponent\'s to fill your store',
+    minPlayers: 2,
+    maxPlayers: 2,
+    imageUrl: '/game-thumbnail/mancala.svg',
+    slug: 'mancala'
+  },
+];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="min-h-screen p-10">
+      <div className="max-w-6xl mx-auto">
+        <h1 className="text-4xl font-bold text-center mb-12 text-[#dfdfdf]">Board Game Collection</h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {games.map((game) => (
+            <Link
+              key={game.id}
+              href={`/games/${game.slug}`}
+              className="game-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 h-90 flex flex-col"
+            >
+              <div className="h-48 relative">
+                <Image
+                  src={game.imageUrl}
+                  alt={`${game.title} cover image`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 120x0px) 50vw, 33vw"
+                />
+              </div>
+              <div className="p-4 grow-1 flex flex-col justify-between">
+                <h2 className="text-xl font-semibold mb-2 text-slate-800">{game.title}</h2>
+                <p className="text-gray-600 mb-3">{game.description}</p>
+                <p className="text-sm text-gray-500">
+                  Players: {game.minPlayers}{game.maxPlayers !== game.minPlayers ? `-${game.maxPlayers}` : ''}
+                </p>
+              </div>
+            </Link>
+          ))}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+    </main>
   );
 }

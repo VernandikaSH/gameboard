@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="space-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050414"/>
+      <stop offset="100%" stop-color="#150a2b"/>
+    </linearGradient>
+    <radialGradient id="nebula1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8e2de2" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#8e2de2" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nebula2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2596be" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#2596be" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nebula3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e0457b" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#e0457b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="planetShade" cx="35%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#ffd89a"/>
+      <stop offset="55%" stop-color="#e8823f"/>
+      <stop offset="100%" stop-color="#7a3418"/>
+    </radialGradient>
+    <radialGradient id="moonShade" cx="35%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#e8e8f0"/>
+      <stop offset="100%" stop-color="#8a8aa0"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="600" fill="url(#space-bg)"/>
+
+  <ellipse cx="620" cy="150" rx="260" ry="200" fill="url(#nebula1)"/>
+  <ellipse cx="180" cy="420" rx="240" ry="180" fill="url(#nebula2)"/>
+  <ellipse cx="480" cy="480" rx="220" ry="150" fill="url(#nebula3)"/>
+
+  <g fill="#ffffff">
+    <circle cx="40" cy="60" r="2"/><circle cx="90" cy="140" r="1.5"/><circle cx="150" cy="40" r="2"/>
+    <circle cx="220" cy="100" r="1.5"/><circle cx="270" cy="60" r="2"/><circle cx="320" cy="150" r="1.5"/>
+    <circle cx="60" cy="220" r="1.5"/><circle cx="130" cy="260" r="2"/><circle cx="200" cy="200" r="1.5"/>
+    <circle cx="30" cy="330" r="2"/><circle cx="90" cy="380" r="1.5"/><circle cx="15" cy="480" r="2"/>
+    <circle cx="60" cy="540" r="1.5"/><circle cx="140" cy="560" r="2"/><circle cx="230" cy="520" r="1.5"/>
+    <circle cx="350" cy="60" r="2"/><circle cx="420" cy="30" r="1.5"/><circle cx="470" cy="90" r="2"/>
+    <circle cx="540" cy="40" r="1.5"/><circle cx="590" cy="70" r="2"/><circle cx="700" cy="50" r="1.5"/>
+    <circle cx="760" cy="100" r="2"/><circle cx="730" cy="200" r="1.5"/><circle cx="680" cy="260" r="2"/>
+    <circle cx="620" cy="230" r="1.5"/><circle cx="750" cy="320" r="2"/><circle cx="700" cy="400" r="1.5"/>
+    <circle cx="760" cy="470" r="2"/><circle cx="640" cy="520" r="1.5"/><circle cx="580" cy="560" r="2"/>
+    <circle cx="500" cy="180" r="1.5"/><circle cx="380" cy="240" r="2"/><circle cx="320" cy="320" r="1.5"/>
+    <circle cx="420" cy="380" r="2"/><circle cx="260" cy="360" r="1.5"/><circle cx="180" cy="150" r="2"/>
+    <circle cx="440" cy="500" r="1.5"/><circle cx="370" cy="550" r="2"/><circle cx="120" cy="480" r="1.5"/>
+  </g>
+
+  <g transform="translate(600,150)">
+    <circle r="95" fill="url(#planetShade)"/>
+    <ellipse rx="150" ry="26" fill="none" stroke="#d9a441" stroke-width="10" opacity="0.75" transform="rotate(-18)"/>
+    <ellipse rx="150" ry="26" fill="none" stroke="#f5cf8a" stroke-width="4" opacity="0.6" transform="rotate(-18)"/>
+  </g>
+
+  <circle cx="150" cy="470" r="45" fill="url(#moonShade)"/>
+  <circle cx="135" cy="458" r="7" fill="#70708a" opacity="0.6"/>
+  <circle cx="162" cy="480" r="5" fill="#70708a" opacity="0.5"/>
+  <circle cx="145" cy="490" r="4" fill="#70708a" opacity="0.5"/>
+</svg>

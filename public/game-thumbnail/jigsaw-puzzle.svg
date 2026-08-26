@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" rx="24" fill="#f8fafc"/>
+  <defs>
+    <linearGradient id="jp-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f7b733"/>
+      <stop offset="100%" stop-color="#e8654f"/>
+    </linearGradient>
+  </defs>
+  <clipPath id="jp-frame">
+    <rect x="40" y="40" width="320" height="320" rx="12"/>
+  </clipPath>
+  <g clip-path="url(#jp-frame)">
+    <rect x="40" y="40" width="320" height="320" fill="url(#jp-sky)"/>
+    <circle cx="220" cy="180" r="55" fill="#ffe9a8"/>
+    <path d="M40,300 L110,240 L170,290 L230,220 L300,280 L360,240 L360,360 L40,360 Z" fill="#2b1a3d"/>
+  </g>
+  <!-- puzzle piece cut lines with tabs, drawn on top -->
+  <g fill="none" stroke="#1f2937" stroke-width="4">
+    <path d="M40,173 C55,173 55,163 65,163 C75,163 75,183 85,183 C95,183 95,163 105,163 C115,163 115,183 125,183 C135,183 135,163 145,163 C155,163 155,173 173,173"/>
+    <path d="M40,253 C55,253 55,243 65,243 C75,243 75,263 85,263 C95,263 95,243 105,243 C115,243 115,263 125,263 C135,263 135,243 145,243 C155,243 155,253 173,253"/>
+    <path d="M173,40 C173,55 163,55 163,65 C163,75 183,75 183,85 C183,95 163,95 163,105 C163,115 183,115 183,125 C183,135 163,135 163,145 C163,155 173,155 173,173"/>
+    <path d="M253,40 C253,55 243,55 243,65 C243,75 263,75 263,85 C263,95 243,95 243,105 C243,115 263,115 263,125 C263,135 243,135 243,145 C243,155 253,155 253,173"/>
+    <path d="M173,173 L360,173"/>
+    <path d="M173,253 L360,253"/>
+    <path d="M173,173 L173,360"/>
+    <path d="M253,173 L253,360"/>
+  </g>
+  <rect x="40" y="40" width="320" height="320" rx="12" fill="none" stroke="#1f2937" stroke-width="6"/>
+</svg>
