@@ -29,6 +29,7 @@
   },
   "allowScripts": {
     "@tailwindcss/oxide": true,
-    "sharp": true
+    "sharp": true,
+    "unrs-resolver": true
   }
 }
